@@ -1,11 +1,11 @@
-import * as three from 'three'
+import * as three from "three";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useState, useEffect } from "react";
 import Loader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene.gltf");
 
   return (
     <mesh>
@@ -52,6 +52,7 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+
   return (
     <Canvas
       frameloop="demand"
